@@ -4,8 +4,7 @@ export default function Home(): React.JSX.Element {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1>Host Application</h1>
-        <p>Welcome to the host app</p>
+        <h1>Hello there, I am the host</h1>
       </main>
     </div>
   );

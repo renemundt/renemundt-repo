@@ -4,8 +4,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Microfrontend A</h1>
-        <p>This is a Vite + React microfrontend</p>
+        <h1>Hello, I am microfrontend a</h1>
       </div>
     </>
   )
