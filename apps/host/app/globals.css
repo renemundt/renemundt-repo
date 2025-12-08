@@ -8,23 +8,16 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a1a 100%);
-  color: #00ffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body {
-  font-family: 'Courier New', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  background-color: #000000;
 }
 
 a {
-  color: #ff00ff;
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
 }

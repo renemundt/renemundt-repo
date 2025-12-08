@@ -10,7 +10,7 @@ First, run the development server:
 pnpm dev
 ```
 
-Open [http://localhost:5001](http://localhost:5001) with your browser to see the result.
+Open [http://localhost:8001](http://localhost:8001) with your browser to see the result.
 
 ## Build
 

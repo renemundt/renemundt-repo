@@ -1,11 +1,11 @@
 :root {
-  font-family: 'Courier New', monospace;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark;
-  color: #00ffff;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a0a1a 50%, #0a0a1a 100%);
+  color-scheme: light;
+  color: #000000;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,6 @@ body {
   place-items: flex-start;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(180deg, #000000 0%, #1a0033 50%, #000033 100%);
   padding-top: 4rem;
 }
 
