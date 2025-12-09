@@ -7,4 +7,10 @@ export default defineConfig({
   server: {
     port: 8001,
   },
+  preview: {
+    port: 8011,
+  },
+  build: {
+    manifest: true,
+  },
 })
