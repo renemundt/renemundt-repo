@@ -9,7 +9,8 @@ export default function Home(): React.JSX.Element {
         const loadMFS = async () => {
             try {
                 // Fetch manifest to get the actual file path
-                const manifestResponse = await fetch('http://localhost:8011/.vite/manifest.json');
+                const host = window.location.hostname === 'renemundt-repo-host.vercel.app' ? 'renemundt-repo-microfrontend-a.vercel.app' : 'localhost:8011';
+                const manifestResponse = await fetch(`http://${host}/.vite/manifest.json`);
                 const manifest = await manifestResponse.json();
                 
                 // Get the JS file path from manifest
@@ -27,7 +28,8 @@ export default function Home(): React.JSX.Element {
 
             try {
                 // Fetch manifest to get the actual file path
-                const manifestResponse = await fetch('http://localhost:8012/.vite/manifest.json');
+                const host = window.location.hostname === 'renemundt-repo-host.vercel.app' ? 'renemundt-repo-microfrontend-b.vercel.app' : 'localhost:8012';
+                const manifestResponse = await fetch(`http://${host}/.vite/manifest.json`);
                 const manifest = await manifestResponse.json();
                 
                 // Get the JS file path from manifest
