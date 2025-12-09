@@ -9,8 +9,8 @@ export default function Home(): React.JSX.Element {
         const loadMFS = async () => {
             try {
                 // Fetch manifest to get the actual file path
-                const host = window.location.hostname === 'renemundt-repo-host.vercel.app' ? 'renemundt-repo-microfrontend-a.vercel.app' : 'localhost:8011';
-                const manifestResponse = await fetch(`http://${host}/.vite/manifest.json`);
+                const origin = window.location.hostname === 'renemundt-repo-host.vercel.app' ? 'https://renemundt-repo-microfrontend-a.vercel.app' : 'http://localhost:8011';
+                const manifestResponse = await fetch(`${origin}/.vite/manifest.json`);
                 const manifest = await manifestResponse.json();
                 
                 // Get the JS file path from manifest
@@ -18,7 +18,7 @@ export default function Home(): React.JSX.Element {
                 
                 // Load microfrontend-a
                 const scriptA = document.createElement('script');
-                scriptA.src = `http://localhost:8011/${entryFile}`;
+                scriptA.src = `${origin}/${entryFile}`;
                 scriptA.type = 'module';
                 scriptA.crossOrigin = 'anonymous';
                 document.body.appendChild(scriptA);
@@ -28,8 +28,8 @@ export default function Home(): React.JSX.Element {
 
             try {
                 // Fetch manifest to get the actual file path
-                const host = window.location.hostname === 'renemundt-repo-host.vercel.app' ? 'renemundt-repo-microfrontend-b.vercel.app' : 'localhost:8012';
-                const manifestResponse = await fetch(`http://${host}/.vite/manifest.json`);
+                const origin = window.location.hostname === 'renemundt-repo-host.vercel.app' ? 'https://renemundt-repo-microfrontend-b.vercel.app' : 'http://localhost:8012';
+                const manifestResponse = await fetch(`${origin}/.vite/manifest.json`);
                 const manifest = await manifestResponse.json();
                 
                 // Get the JS file path from manifest
@@ -37,7 +37,7 @@ export default function Home(): React.JSX.Element {
                 
                 // Load microfrontend-b
                 const scriptB = document.createElement('script');
-                scriptB.src = `http://localhost:8012/${entryFile}`;
+                scriptB.src = `${origin}/${entryFile}`;
                 scriptB.type = 'module';
                 scriptB.crossOrigin = 'anonymous';
                 document.body.appendChild(scriptB);
